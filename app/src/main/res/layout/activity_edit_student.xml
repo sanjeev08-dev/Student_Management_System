@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_anim"
+    tools:context=".Activities.EditStudentActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editStudentRollNoTIET"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_toStartOf="@id/searchBTN"
+        android:background="@drawable/textfieldbg"
+        android:fontFamily="@font/ubuntu_regular"
+        android:hint="@string/enter_roll_no"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/textHintColor"
+        android:textSize="@dimen/_13ssp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/ubuntu_bold"
+        android:onClick="searchStudentDetails"
+        android:text="@string/search"
+        android:textColor="@android:color/white" />
+
+    <ScrollView
+        android:id="@+id/editStudentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editStudentRollNoTIET"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/editStudentPic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/admin_pic"
+                    app:civ_border_color="#FFFFFF"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@color/lightBlue" />
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignEnd="@id/editStudentPic"
+                    android:layout_alignBottom="@id/editStudentPic"
+                    android:background="@drawable/camerabg"
+                    android:onClick="loadNewPic"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_camera" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editStudentNameTIET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/textfieldbg"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="@string/xyz"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/father_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editStudentFatherNameTIET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/textfieldbg"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="@string/xyz"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/mother_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editStudentMotherNameTIET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/textfieldbg"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="@string/xyz"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/phone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editStudentPhoneNumberTIET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/textfieldbg"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="@string/phone_hint"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/email"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editStudentEmailTIET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/textfieldbg"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="@string/xyz12_gmail_com"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/address"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editStudentAddressTIET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/textfieldbg"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="@string/address"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13ssp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/ubuntu_bold"
+                android:onClick="ModifyData"
+                android:text="@string/update"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

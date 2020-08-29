@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_anim"
+    android:orientation="vertical"
+    tools:context=".Activities.StudentAddActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/studentPicAdd"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/admin_pic"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/lightBlue" />
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignEnd="@id/studentPicAdd"
+            android:layout_alignBottom="@id/studentPicAdd"
+            android:background="@drawable/camerabg"
+            android:onClick="loadPic"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_camera" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/studentPicAdd">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddNameTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="XYZ"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/father_name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddFatherNameTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="XYZ"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/mother_name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddMotherNameTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="XYZ"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/roll_no"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddRollNumberTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/xyz"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/phone"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.github.pinball83.maskededittext.MaskedEditText
+                    android:id="@+id/studentAddPhoneNumberTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/phone_hint"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp"
+                    app:mask="+91**********"
+                    app:notMaskedSymbol="*" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/email"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddEmailTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/xyz12_gmail_com"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/address"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddAddressTIET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/address"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/date_of_birth"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAddDOBTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/textfieldbg"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="@string/_15_08_1947"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:onClick="DOB_Picker"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/textHintColor"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/academic_details"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/studentAddHighSchoolMMTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textfieldbg"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:hint="@string/high_school_mm"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/textHintColor"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/studentAddHighSchoolMOTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textfieldbg"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:hint="@string/high_school_mo"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/textHintColor"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/studentAddInterSchoolMMTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textfieldbg"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:hint="@string/intermediate_mm"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/textHintColor"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/studentAddInterSchoolMOTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textfieldbg"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:hint="@string/inter_school_mo"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/textHintColor"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/studentHighSchoolPercentageTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/studentInterSchoolPercentageTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/gender"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_25sdp">
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/icon_male"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/male"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/icon_female"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/female"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+                </RadioGroup>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:onClick="submitData"
+                    android:text="@string/submit"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

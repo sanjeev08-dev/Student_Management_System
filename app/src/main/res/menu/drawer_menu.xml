@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_student_dashboard"
+            android:icon="@drawable/icon_phone"
+            android:title="@string/student_deshboard" />
+        <item android:id="@+id/nav_my_profile"
+            android:icon="@drawable/icon_password"
+            android:title="@string/my_profile"/>
+    </group>
+
+</menu>

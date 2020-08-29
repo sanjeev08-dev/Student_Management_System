@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "442393046487",
+    "firebase_url": "https://student-management-system-fire.firebaseio.com",
+    "project_id": "student-management-system-fire",
+    "storage_bucket": "student-management-system-fire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442393046487:android:4c3061a0232659fdad6f92",
+        "android_client_info": {
+          "package_name": "com.example.studentmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442393046487-0a8lsc4j97ktqmn2jug8pkhluc4bpcrm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentmanagementsystem",
+            "certificate_hash": "345ad9de487d5efe4e63aa278e3b081d5b488b08"
+          }
+        },
+        {
+          "client_id": "442393046487-vtrgu8ng8fkkk7t1pqdt4sga60k67ung.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlwJ7Qk5xbxXjsuCzlNMJ_MzPPFERe1Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442393046487-vtrgu8ng8fkkk7t1pqdt4sga60k67ung.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442393046487:android:a3b084d4a7fa195fad6f92",
+        "android_client_info": {
+          "package_name": "com.example.studentmanagementsystemfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442393046487-8u50p214db65os8mrian0urv42cbi3t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentmanagementsystemfirebase",
+            "certificate_hash": "f82334b57b62d9830295519ee4781d8ed410c8b1"
+          }
+        },
+        {
+          "client_id": "442393046487-vtrgu8ng8fkkk7t1pqdt4sga60k67ung.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlwJ7Qk5xbxXjsuCzlNMJ_MzPPFERe1Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442393046487-vtrgu8ng8fkkk7t1pqdt4sga60k67ung.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
